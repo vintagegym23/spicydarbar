@@ -4,8 +4,15 @@ import { MapPin, Utensils } from 'lucide-react';
 export const MapCard: React.FC = () => {
   return (
     <div className="w-full flex flex-col rounded-lg overflow-hidden border border-gold-muted/20 shadow-lg">
-      <div className="w-full bg-[#5C4A38] flex items-center justify-center min-h-[350px] md:min-h-[450px]">
-        <MapPin className="text-sand/40 w-32 h-32 md:w-40 md:h-40" />
+      <div className="w-full flex items-center justify-center min-h-[350px] md:min-h-[450px]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.829289608259!2d-1.1202668233344901!3d52.62692897208946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877613be6dca869%3A0x6976e09a9a132cb2!2s6%20Evington%20Rd%2C%20Leicester%20LE2%201HF%2C%20UK!5e0!3m2!1sen!2sin!4v1776666354370!5m2!1sen!2sin"
+          className="w-full h-full min-h-[350px] md:min-h-[450px]"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
       <div className="bg-bg-card p-8 md:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
         <div>
@@ -17,15 +24,15 @@ export const MapCard: React.FC = () => {
             </span>
           </div>
           <p className="text-sand text-base leading-relaxed max-w-2xl">
-            Located in the heart of the diplomatic enclave, our flagship restaurant offers 
-            valet parking and a dedicated concierge for all guests. Experience the royal 
+            Located in the heart of the diplomatic enclave, our flagship restaurant offers
+            valet parking and a dedicated concierge for all guests. Experience the royal
             heritage of Indian cuisine.
           </p>
         </div>
         <div className="flex-shrink-0">
-          <a 
-            href="https://maps.google.com" 
-            target="_blank" 
+          <a
+            href="https://maps.google.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-gold text-btn-dark font-sans font-bold text-sm px-8 py-4 rounded-md hover:bg-yellow-400 transition-all duration-300 w-full md:w-auto"
           >
