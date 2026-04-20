@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Eyebrow } from '../../ui/Eyebrow';
 import { Button } from '../../ui/Button';
 import { TypewriterText } from '../../ui/TypewriterText';
+import { BookingModal } from './BookingModal';
+import { Toast } from '../../ui/Toast';
 
 export const Hero: React.FC = () => {
   const navigate = useNavigate();
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
-  const handleOrderClick = () => {
-    document.getElementById('delivery')?.scrollIntoView({ behavior: 'smooth' });
+  const handleBookingSuccess = () => {
+    setShowToast(true);
   };
 
   return (
@@ -36,26 +40,27 @@ export const Hero: React.FC = () => {
           >
             <Eyebrow className="mb-4 text-gold-muted font-bold">New Delhi's Royal Kitchen</Eyebrow>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-cream leading-tight mb-4">
-              A Legacy of <span className="italic text-gold">Mughlai <br /> Excellence</span>
+              A Legacy of Royal Flavours & <span className="italic text-gold">Indian  <br /> Heritage</span>
             </h1>
+            {/* Royal Taste, Infinite Flavours of India  A Legacy of Royal Flavours & Indian Heritage*/}
 
             <div className="h-8 md:h-10 mb-8 flex items-center justify-center md:justify-start">
-              <TypewriterText 
+              <TypewriterText
                 phrases={[
                   "Experience Authentic Flavors",
                   "A Royal Dining Experience",
                   "Spice Darbar Specials",
                   "An Unforgettable Taste"
-                ]} 
+                ]}
                 typingSpeed={60}
                 deletingSpeed={30}
                 delayBeforeDelete={1500}
                 className="text-lg md:text-xl text-gold-muted font-sans tracking-wide"
               />
             </div>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-              <Button variant="primary" onClick={handleOrderClick} className="w-full sm:w-auto px-8 py-3 text-sm">
+              <Button variant="primary" onClick={() => setIsBookingModalOpen(true)} className="w-full sm:w-auto px-8 py-3 text-sm">
                 Book a Table
               </Button>
               <Button variant="outline" onClick={() => navigate('/menu')} className="w-full sm:w-auto px-8 py-3 text-sm">
@@ -65,6 +70,18 @@ export const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+      <BookingModal 
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        onSuccess={handleBookingSuccess}
+      />
+      
+      <Toast 
+        message="Reservation request sent successfully!"
+        visible={showToast}
+        onClose={() => setShowToast(false)}
+      />
     </section>
   );
 };

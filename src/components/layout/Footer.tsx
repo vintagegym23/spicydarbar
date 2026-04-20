@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Share2, Globe, Phone } from 'lucide-react';
+import { Instagram, Facebook, Phone } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Toast } from '../ui/Toast';
 
@@ -31,16 +31,28 @@ export const Footer: React.FC = () => {
               <span className="font-serif text-2xl text-cream">Spice Darbar</span>
             </div>
             <p className="text-muted text-sm leading-relaxed mb-6">
-              Experience the royal heritage of Indian cuisine through our curated dishes, 
+              Experience the royal heritage of Indian cuisine through our curated dishes,
               crafted with passion and served with tradition.
             </p>
             <div className="flex gap-4">
-              <button className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all">
-                <Share2 size={18} />
-              </button>
-              <button className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all">
-                <Globe size={18} />
-              </button>
+              <a 
+                href="https://www.instagram.com/thespicedarbar?igsh=MWtzandjN2drOWFlOA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a 
+                href="https://www.facebook.com/share/1BbEkt5LS9/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all"
+                aria-label="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
             </div>
           </div>
 
@@ -99,7 +111,7 @@ export const Footer: React.FC = () => {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+911123456789"
+        href="tel:+91 75020 23334"
         className="fixed bottom-[30px] right-[30px] w-14 h-14 bg-gold rounded-full flex items-center justify-center text-btn-dark shadow-[0_8px_24px_rgba(0,0,0,0.5)] hover:scale-110 transition-transform z-40"
       >
         <Phone size={24} />
