@@ -2,7 +2,6 @@ import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ContactHeader } from '../components/sections/contact/ContactHeader';
 import { InfoCards } from '../components/sections/contact/InfoCards';
-import { ContactForm } from '../components/sections/contact/ContactForm';
 import { MapCard } from '../components/sections/contact/MapCard';
 
 const Contact: React.FC = () => {
@@ -14,8 +13,7 @@ const Contact: React.FC = () => {
       <ContactHeader />
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <InfoCards />
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <ContactForm defaultSubject={subject} />
+        <div className="w-full mt-12">
           <MapCard />
         </div>
       </div>
