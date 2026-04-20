@@ -4,7 +4,7 @@ import { Button } from '../../ui/Button';
 
 export const AlternatingRows: React.FC = () => {
   const navigate = useNavigate();
-  
+
   const rows = [
     {
       id: '1',
@@ -25,8 +25,8 @@ export const AlternatingRows: React.FC = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-24 space-y-24">
       {rows.map((row) => (
-        <div 
-          key={row.id} 
+        <div
+          key={row.id}
           className={`flex flex-col ${row.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}
         >
           <div className="flex-1 space-y-6">

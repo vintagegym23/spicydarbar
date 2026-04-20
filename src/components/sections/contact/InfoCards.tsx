@@ -7,21 +7,21 @@ export const InfoCards: React.FC = () => {
       id: '1',
       icon: <MapPin className="w-5 h-5 text-gold" />,
       title: 'Location',
-      details: ['12, Royal Enclave', 'Chanakyapuri, New Delhi', 'Delhi 110021'],
+      details: ['6, Evington Road', 'Leicester , LE2 1HF'],
       cta: 'GET DIRECTIONS'
     },
     {
       id: '2',
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: 'Reservations',
-      details: ['+91 11 2345 6789', '+91 98765 43210', 'Available 11 AM - 11 PM'],
+      details: ['+91 7502023334', '+91 98765 43210', 'Available 11 AM - 11 PM'],
       cta: 'CALL NOW'
     },
     {
       id: '3',
       icon: <Mail className="w-5 h-5 text-gold" />,
       title: 'Enquiries',
-      details: ['royal@spicedarbar.com', 'events@spicedarbar.com', 'Response within 24 hours'],
+      details: ['spicedarbar6@gmail.com', 'events@spicedarbar.com', 'Response within 24 hours'],
       cta: 'EMAIL US'
     }
   ];

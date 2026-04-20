@@ -8,7 +8,7 @@ export const AboutHeader: React.FC = () => {
         <SectionHeader
           eyebrow="OUR GENESIS"
           title="The Spice Darbar Story"
-          description="A legacy of flavor, born in the heart of Old Delhi and refined for the modern connoisseur."
+          description="A legacy of flavor, born in the heart of India and refined for the modern connoisseur."
           centered
         />
       </div>
