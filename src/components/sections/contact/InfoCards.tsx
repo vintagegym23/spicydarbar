@@ -14,7 +14,7 @@ export const InfoCards: React.FC = () => {
       id: '2',
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: 'Reservations',
-      details: ['+91 98765 43210', 'Available 11 AM - 11 PM'],
+      details: ['Phone: 07502023334', 'Available 11 AM - 11 PM'],
       cta: 'CALL NOW'
     },
     {

@@ -6,7 +6,7 @@ export const MapCard: React.FC = () => {
     <div className="w-full flex flex-col rounded-lg overflow-hidden border border-gold-muted/20 shadow-lg">
       <div className="w-full flex items-center justify-center min-h-[350px] md:min-h-[450px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.829289608259!2d-1.1202668233344901!3d52.62692897208946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877613be6dca869%3A0x6976e09a9a132cb2!2s6%20Evington%20Rd%2C%20Leicester%20LE2%201HF%2C%20UK!5e0!3m2!1sen!2sin!4v1776666354370!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19372.694554858324!2d-1.1416746364026402!3d52.631310363768385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487761b3aef6d499%3A0x43a44d9c057dba83!2sSpice%20Darbar!5e0!3m2!1sen!2sin!4v1776668200705!5m2!1sen!2sin"
           className="w-full h-full min-h-[350px] md:min-h-[450px]"
           style={{ border: 0 }}
           allowFullScreen={true}
