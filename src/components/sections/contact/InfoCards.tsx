@@ -14,14 +14,14 @@ export const InfoCards: React.FC = () => {
       id: '2',
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: 'Reservations',
-      details: ['+91 7502023334', '+91 98765 43210', 'Available 11 AM - 11 PM'],
+      details: ['+91 98765 43210', 'Available 11 AM - 11 PM'],
       cta: 'CALL NOW'
     },
     {
       id: '3',
       icon: <Mail className="w-5 h-5 text-gold" />,
       title: 'Enquiries',
-      details: ['spicedarbar6@gmail.com', 'events@spicedarbar.com', 'Response within 24 hours'],
+      details: ['spicedarbar6@gmail.com', 'Response within 24 hours'],
       cta: 'EMAIL US'
     }
   ];
