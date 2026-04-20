@@ -34,26 +34,26 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl text-center md:text-left pt-28 md:pt-20 mx-auto md:mx-0"
           >
-            <Eyebrow className="mb-4 text-gold-muted font-bold">New Delhi's Royal Kitchen</Eyebrow>
+            <Eyebrow className="mb-4 text-gold-muted font-bold">Authentic Indian Restaurant</Eyebrow>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-cream leading-tight mb-4">
               A Legacy of <span className="italic text-gold">Mughlai <br /> Excellence</span>
             </h1>
 
             <div className="h-8 md:h-10 mb-8 flex items-center justify-center md:justify-start">
-              <TypewriterText 
+              <TypewriterText
                 phrases={[
                   "Experience Authentic Flavors",
                   "A Royal Dining Experience",
                   "Spice Darbar Specials",
                   "An Unforgettable Taste"
-                ]} 
+                ]}
                 typingSpeed={60}
                 deletingSpeed={30}
                 delayBeforeDelete={1500}
                 className="text-lg md:text-xl text-gold-muted font-sans tracking-wide"
               />
             </div>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
               <Button variant="primary" onClick={handleOrderClick} className="w-full sm:w-auto px-8 py-3 text-sm">
                 Book a Table
