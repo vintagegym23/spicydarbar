@@ -3,7 +3,7 @@ import { Hero } from '../components/sections/home/Hero';
 import { StatsBand } from '../components/sections/home/StatsBand';
 import { SignatureDishes } from '../components/sections/home/SignatureDishes';
 import { DeliveryPartners } from '../components/sections/home/DeliveryPartners';
-import grandOpeningImg from '../Images/Grand-opening.jpeg';
+import grandOpeningImg from '../Images/Grand-opening1.jpeg';
 
 const Home: React.FC = () => {
   return (
