@@ -3,68 +3,35 @@ import { Dish } from '../types';
 export const dishes: Dish[] = [
   {
     id: '1',
-    name: 'Shahi Murgh Makhani',
+    name: 'Dum Biryani',
     price: '₹845',
-    description: "Old Delhi style pulled chicken, slow-cooked in a velvet tomato and tempered butter gravy.",
-    category: 'main-course',
-    badge: 'spicy',
-    badgeLabel: 'Spicy',
-    tags: ['Chicken', 'Butter'],
-    image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800'
-  },
-  {
-    id: '2',
-    name: 'Darbar Gosht Biryani',
-    price: '₹1,125',
-    description: "Tender lamb leg, long grain Basmati rice, saffron, and house-made 'Potli' spices.",
+    description: 'Fragrant basmati rice slow-cooked with tender meat, aromatic spices, and sealed to perfection for an authentic royal taste.',
     category: 'main-course',
     badge: 'star',
     badgeLabel: 'Signature',
-    tags: ['Lamb', 'Rice'],
+    tags: ['Rice', 'Spices'],
     image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800'
   },
   {
+    id: '2',
+    name: 'Masala Dosa',
+    price: '₹395',
+    description: 'Golden, crispy dosa filled with spiced potato masala, served with chutneys and sambar for a classic South Indian delight.',
+    category: 'south-indian',
+    badge: 'veg',
+    badgeLabel: 'Veg',
+    tags: ['Veg', 'South Indian'],
+    image: 'https://images.unsplash.com/photo-1751560455942-f859f1215826?q=80&w=766&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
     id: '3',
-    name: 'Malai Paneer Tikka',
-    price: '₹725',
-    description: "Chargrilled cottage cheese, cardamom, green chili, and roasted almond crust.",
-    category: 'tandoor',
-    badge: 'veg',
-    badgeLabel: 'Vegetarian',
-    tags: ['Paneer', 'Tandoor'],
-    image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=800'
-  },
-  {
-    id: '4',
-    name: 'Dal Darbar',
-    price: '₹595',
-    description: "Black lentils slow-cooked for 24 hours on coal, finished with hand-churned butter.",
-    category: 'main-course',
-    badge: 'veg',
-    badgeLabel: 'Vegetarian',
-    tags: ['Lentils', 'Slow-cooked'],
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800'
-  },
-  {
-    id: '5',
-    name: 'Moilee Tiger Prawns',
-    price: '₹1,245',
-    description: "Fresh jumbo prawns simmered in ginger and curry leaf infused coconut milk.",
-    category: 'main-course',
-    badge: 'star',
-    badgeLabel: 'Signature',
-    tags: ['Seafood', 'Coconut'],
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800'
-  },
-  {
-    id: '6',
-    name: 'Kesar Phirni Tart',
-    price: '₹495',
-    description: "Traditional rice pudding in a shortbread crust, topped with 24k gold leaf.",
-    category: 'desserts',
-    badge: null,
-    badgeLabel: null,
-    tags: ['Dessert', 'Saffron'],
-    image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800'
+    name: 'Chaat',
+    price: '₹295',
+    description: "A burst of tangy, spicy, and sweet flavors with crunchy textures—India's favorite street-style snack reimagined.",
+    category: 'starters',
+    badge: 'spicy',
+    badgeLabel: 'Spicy',
+    tags: ['Street Food', 'Veg'],
+    image: 'https://media.istockphoto.com/id/2178573933/photo/aloo-papdi-chaat.jpg?s=612x612&w=0&k=20&c=83nka_Rs1OYCxNcjl1LbnH15I39VtofkYMC5lUNtspA='
   }
 ];

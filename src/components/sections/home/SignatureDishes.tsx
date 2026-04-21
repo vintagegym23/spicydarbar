@@ -8,7 +8,7 @@ import { Badge } from '../../ui/Badge';
 
 export const SignatureDishes: React.FC = () => {
   const navigate = useNavigate();
-  const signatureDishes = dishes.filter(d => d.badge === 'star' || d.badge === 'spicy').slice(0, 3);
+  const signatureDishes = dishes.slice(0, 3);
 
   const taglines = [
     "A Royal Favorite",
@@ -26,7 +26,10 @@ export const SignatureDishes: React.FC = () => {
             title="Signature Masterpieces"
             className="max-w-2xl"
           />
-          <Button variant="inline" onClick={() => navigate('/menu')}>
+          {/* <Button variant="inline" onClick={() => navigate('/menu')}>
+            Explore Full Menu →
+          </Button> */}
+            <Button variant="inline" >
             Explore Full Menu →
           </Button>
         </div>
