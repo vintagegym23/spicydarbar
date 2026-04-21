@@ -12,8 +12,8 @@ interface MobileMenuProps {
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrderClick }) => {
   const links = [
     { name: 'Home', path: '/' },
-    { name: 'Menu', path: '/menu' },
-    { name: 'Gallery', path: '/gallery' },
+    // { name: 'Menu', path: '/menu' },
+    // { name: 'Gallery', path: '/gallery' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];

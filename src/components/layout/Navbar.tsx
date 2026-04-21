@@ -52,8 +52,8 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-8">
             {[
               { name: 'HOME', path: '/' },
-              { name: 'MENU', path: '/menu' },
-              { name: 'GALLERY', path: '/gallery' },
+              // { name: 'MENU', path: '/menu' },
+              // { name: 'GALLERY', path: '/gallery' },
               { name: 'ABOUT', path: '/about' },
               { name: 'CONTACT', path: '/contact' },
             ].map((link) => (
