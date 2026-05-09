@@ -4,17 +4,7 @@ import { Button } from '../ui/Button';
 import { Toast } from '../ui/Toast';
 
 export const Footer: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [showToast, setShowToast] = useState(false);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailRegex.test(email)) {
-      setShowToast(true);
-      setEmail('');
-    }
-  };
 
   return (
     <footer className="bg-bg-base pt-20 pb-10 px-4 md:px-8 border-t border-gold-muted/10">
@@ -68,33 +58,26 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Legal */}
-          <div>
-            <h4 className="text-gold font-sans text-xs font-bold tracking-widest uppercase mb-6">Legal</h4>
-            <ul className="flex flex-col gap-4">
-              {['Privacy Policy', 'Terms of Service', 'Sustainability', 'Careers'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-muted text-sm hover:text-gold transition-colors">{item}</a>
-                </li>
+          {/* Col 3: Timings */}
+          <div className="lg:col-span-2 lg:pl-12">
+            <h4 className="text-gold font-sans text-xs font-bold tracking-widest uppercase mb-6">Opening Hours</h4>
+            <p className="text-muted text-sm mb-4">Open with main hours</p>
+            <div className="flex flex-col gap-3 max-w-sm">
+              {[
+                { day: 'Monday', hours: '12:00-00:00' },
+                { day: 'Tuesday', hours: '12:00-00:00' },
+                { day: 'Wednesday', hours: '12:00-00:00' },
+                { day: 'Thursday', hours: '12:00-00:00' },
+                { day: 'Friday', hours: '12:00-00:00' },
+                { day: 'Saturday', hours: '12:00-00:00' },
+                { day: 'Sunday', hours: '12:00-00:00' },
+              ].map((schedule) => (
+                <div key={schedule.day} className="flex justify-between items-center text-sm border-b border-gold-muted/10 pb-2">
+                  <span className="text-cream">{schedule.day}</span>
+                  <span className="text-gold">{schedule.hours}</span>
+                </div>
               ))}
-            </ul>
-          </div>
-
-          {/* Col 4: Newsletter */}
-          <div>
-            <h4 className="text-gold font-sans text-xs font-bold tracking-widest uppercase mb-6">Newsletter</h4>
-            <p className="text-muted text-sm mb-6">Join our inner circle for exclusive updates and royal invitations.</p>
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-bg-card border border-gold-muted/30 rounded-md px-4 py-2 text-cream text-sm focus:outline-none focus:border-gold w-full"
-                required
-              />
-              <Button type="submit" className="px-4 py-2 text-xs">Join</Button>
-            </form>
+            </div>
           </div>
         </div>
 
@@ -117,11 +100,7 @@ export const Footer: React.FC = () => {
         <Phone size={24} />
       </a>
 
-      <Toast
-        message="Welcome to the Inner Circle."
-        visible={showToast}
-        onClose={() => setShowToast(false)}
-      />
+
     </footer>
   );
 };
