@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+91 75020 23334"
+        href="tel:+44 7502 023334"
         className="fixed bottom-[30px] right-[30px] w-14 h-14 bg-gold rounded-full flex items-center justify-center text-btn-dark shadow-[0_8px_24px_rgba(0,0,0,0.5)] hover:scale-110 transition-transform z-40"
       >
         <Phone size={24} />

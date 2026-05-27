@@ -15,6 +15,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrder
     // { name: 'Menu', path: '/menu' },
     // { name: 'Gallery', path: '/gallery' },
     { name: 'About', path: '/about' },
+    { name: 'Catering', path: '/catering' },
     { name: 'Contact', path: '/contact' },
   ];
 

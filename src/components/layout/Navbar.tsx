@@ -55,6 +55,7 @@ export const Navbar: React.FC = () => {
               // { name: 'MENU', path: '/menu' },
               // { name: 'GALLERY', path: '/gallery' },
               { name: 'ABOUT', path: '/about' },
+              { name: 'CATERING', path: '/catering' },
               { name: 'CONTACT', path: '/contact' },
             ].map((link) => (
               <NavLink
