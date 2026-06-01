@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { X } from 'lucide-react';
 
 /* ───────── confetti / decorative pieces ───────── */
 const confettiPieces = [
@@ -116,6 +117,7 @@ export const OffersCard: React.FC = () => {
   const location = useLocation();
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [minimized, setMinimized] = useState(false);
 
   // Hide the card on the offers page itself
   const isOnOffersPage = location.pathname === '/offers';
@@ -129,9 +131,18 @@ export const OffersCard: React.FC = () => {
     navigate('/offers');
   };
 
+  const handleClose = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setMinimized(true);
+  };
+
+  const handleMinimizedClick = () => {
+    setMinimized(false);
+  };
+
   return (
     <AnimatePresence>
-      {visible && !isOnOffersPage && (
+      {visible && !isOnOffersPage && !minimized && (
         <motion.div
           initial={{ opacity: 0, y: 60, scale: 0.85, rotate: -4 }}
           animate={{ opacity: 1, y: 0, scale: 1, rotate: -2 }}
@@ -141,7 +152,7 @@ export const OffersCard: React.FC = () => {
           onClick={handleClick}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="fixed bottom-24 right-4 sm:bottom-20 sm:right-6 md:bottom-24 md:right-8 z-40 cursor-pointer select-none w-[170px] md:w-[220px]"
+          className="fixed bottom-24 right-4 sm:bottom-20 sm:right-6 md:bottom-28 md:right-8 z-40 select-none w-[170px] md:w-[220px] cursor-pointer"
           role="button"
           aria-label="View Special Offers"
           tabIndex={0}
@@ -179,6 +190,15 @@ export const OffersCard: React.FC = () => {
               boxShadow: '0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(245,197,24,0.06)',
             }}
           >
+            {/* Close button (X icon) */}
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 md:top-3 md:right-3 z-50 text-red-500 hover:text-red-400 transition-colors cursor-pointer"
+              aria-label="Minimize offers card"
+            >
+              <X size={18} />
+            </button>
+
             {/* ─── TOP: Offer Preview ─── */}
             <div className="relative px-3 pt-3 pb-2 md:px-5 md:pt-5 md:pb-4">
               {/* Badge */}
@@ -257,6 +277,28 @@ export const OffersCard: React.FC = () => {
             </div>
           </div>
         </motion.div>
+      )}
+
+      {/* Minimized state - Small confetti icon just above phone button */}
+      {visible && !isOnOffersPage && minimized && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          transition={{ type: 'spring', damping: 20, stiffness: 200 }}
+          onClick={handleMinimizedClick}
+          whileHover={{ scale: 1.15 }}
+          className="fixed bottom-24 right-4 sm:bottom-20 sm:right-6 md:bottom-26 md:right-8 z-40 w-12 h-12 md:w-14 md:h-14 bg-gold/10 border-2 border-gold rounded-full flex items-center justify-center text-gold hover:bg-gold/20 transition-all cursor-pointer"
+          aria-label="Expand offers"
+        >
+          <motion.span
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="text-2xl md:text-3xl"
+          >
+            🎉
+          </motion.span>
+        </motion.button>
       )}
     </AnimatePresence>
   );
