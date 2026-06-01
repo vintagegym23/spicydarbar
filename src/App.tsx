@@ -7,11 +7,15 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { OffersCard } from './components/ui/OffersCard';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Catering from './pages/Catering';
+import Offers from './pages/Offers';
+import Collections from './pages/Collections';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,9 +37,13 @@ export default function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
+        <Route path="/catering" element={<Catering />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/collections" element={<Collections />} />
       </Routes>
       <Footer />
+      <OffersCard />
     </div>
   );
 }

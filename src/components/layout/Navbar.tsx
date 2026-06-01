@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { MobileMenu } from './MobileMenu';
@@ -9,7 +9,6 @@ import Logo from '../../Images/spicydarbar.png';
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,17 +18,6 @@ export const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleOrderClick = () => {
-    if (location.pathname === '/') {
-      document.getElementById('delivery')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        document.getElementById('delivery')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
 
   return (
     <>
@@ -52,16 +40,17 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-8">
             {[
               { name: 'HOME', path: '/' },
-              // { name: 'MENU', path: '/menu' },
-              // { name: 'GALLERY', path: '/gallery' },
+              { name: 'MENU', path: '/menu' },
+              { name: 'GALLERY', path: '/gallery' },
               { name: 'ABOUT', path: '/about' },
+              // { name: 'CATERING', path: '/catering' },
               { name: 'CONTACT', path: '/contact' },
             ].map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `font-sans text-xs font-semibold tracking-widest transition-all duration-300 pb-1 border-b-2 ${
+                  `font-sans text-xs font-semibold tracking-widest transition-all duration-300 pb-1 border-b-2 cursor-pointer ${
                     isActive
                       ? 'text-cream border-gold'
                       : 'text-muted border-transparent hover:text-gold'
@@ -75,14 +64,15 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop CTA / Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <div className="hidden lg:block">
-              <Button variant="primary" onClick={handleOrderClick}>
-                Order Online
-              </Button>
-            </div>
+            <button
+              onClick={() => navigate('/collections')}
+              className="hidden lg:inline-flex bg-gold text-btn-dark font-sans font-semibold text-sm px-7 py-3 rounded-md hover:bg-yellow-400 transition-all duration-300 cursor-pointer"
+            >
+              Takeaways
+            </button>
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden text-cream hover:text-gold transition-colors"
+              className="md:hidden text-cream hover:text-gold transition-colors cursor-pointer"
             >
               <Menu size={28} />
             </button>
@@ -92,8 +82,7 @@ export const Navbar: React.FC = () => {
 
       <MobileMenu 
         isOpen={isMobileMenuOpen} 
-        onClose={() => setIsMobileMenuOpen(false)} 
-        onOrderClick={handleOrderClick}
+        onClose={() => setIsMobileMenuOpen(false)}
       />
     </>
   );

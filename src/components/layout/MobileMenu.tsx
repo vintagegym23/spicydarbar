@@ -1,20 +1,22 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { X } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  onOrderClick: () => void;
 }
 
-export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrderClick }) => {
+export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
   const links = [
     { name: 'Home', path: '/' },
-    // { name: 'Menu', path: '/menu' },
-    // { name: 'Gallery', path: '/gallery' },
+    { name: 'Menu', path: '/menu' },
+    { name: 'Gallery', path: '/gallery' },
     { name: 'About', path: '/about' },
+    // { name: 'Catering', path: '/catering' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -27,7 +29,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrder
     >
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-cream hover:text-gold transition-colors"
+        className="absolute top-6 right-6 text-cream hover:text-gold transition-colors cursor-pointer"
       >
         <X size={32} />
       </button>
@@ -39,7 +41,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrder
             to={link.path}
             onClick={onClose}
             className={({ isActive }) =>
-              `font-serif text-2xl ${
+              `font-serif text-2xl cursor-pointer ${
                 isActive ? 'text-gold' : 'text-cream'
               } hover:text-gold transition-colors`
             }
@@ -49,15 +51,16 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOrder
         ))}
       </div>
 
-      <div className="mt-auto">
-        <button 
+      <div className="mt-auto space-y-3">
+        {/* Takeaways Button */}
+        <button
           onClick={() => {
             onClose();
-            onOrderClick();
+            navigate('/collections');
           }}
-          className="w-full bg-gold text-btn-dark font-sans font-semibold text-base py-3 rounded-md transition-colors hover:bg-gold/90"
+          className="w-full bg-gold text-btn-dark font-sans font-semibold text-base py-3 rounded-md transition-colors hover:bg-gold/90 cursor-pointer"
         >
-          Order Online
+          Takeaways
         </button>
       </div>
     </motion.div>

@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://www.instagram.com/thespicedarbar?igsh=MWtzandjN2drOWFlOA=="
+                href="https://www.instagram.com/spicedarbar_leicester/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all"
@@ -94,10 +94,11 @@ export const Footer: React.FC = () => {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+91 75020 23334"
-        className="fixed bottom-[30px] right-[30px] w-14 h-14 bg-gold rounded-full flex items-center justify-center text-btn-dark shadow-[0_8px_24px_rgba(0,0,0,0.5)] hover:scale-110 transition-transform z-40"
+        href="tel:+44 7502 023334"
+        className="fixed bottom-8 right-4 sm:bottom-0 sm:right-6 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-gold rounded-full flex items-center justify-center text-btn-dark shadow-[0_8px_24px_rgba(0,0,0,0.5)] hover:scale-110 transition-transform z-50"
       >
-        <Phone size={24} />
+        <Phone size={24} className="hidden md:block" />
+        <Phone size={20} className="md:hidden" />
       </a>
 
 

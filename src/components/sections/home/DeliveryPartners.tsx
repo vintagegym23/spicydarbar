@@ -28,7 +28,9 @@ export const DeliveryPartners: React.FC = () => {
                 {partner.description}
               </p>
               <div className="w-full">
-                <Button variant="primary" className="w-full opacity-60 cursor-default pointer-events-none">Order via {partner.name}</Button>
+                <a href={partner.url} className="block">
+                  <Button variant="primary" className="w-full">Order via {partner.name}</Button>
+                </a>
               </div>
             </div>
           ))}

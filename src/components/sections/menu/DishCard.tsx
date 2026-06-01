@@ -4,7 +4,7 @@ import { Badge } from '../../ui/Badge';
 
 export const DishCard: React.FC<{ dish: Dish }> = ({ dish }) => {
   return (
-    <div className="bg-bg-card border border-muted/20 rounded-xl overflow-hidden group hover:border-gold/30 transition-all flex h-40">
+    <div className="bg-bg-card border border-muted/20 rounded-xl overflow-hidden group hover:border-gold/30 transition-all flex h-40 cursor-pointer">
       <div className="relative w-40 h-40 flex-shrink-0 overflow-hidden">
         <img
           src={dish.image}

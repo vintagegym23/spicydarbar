@@ -14,7 +14,7 @@ export const InfoCards: React.FC = () => {
       id: '2',
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: 'Reservations',
-      details: ['Phone: 07502023334', 'Available 11 AM - 11 PM'],
+      details: ['Phone: +44 7502 023334', 'Available 11 AM - 11 PM'],
       cta: 'CALL NOW'
     },
     {
@@ -39,7 +39,7 @@ export const InfoCards: React.FC = () => {
               <p key={i} className="text-sand text-sm">{detail}</p>
             ))}
           </div>
-          <button className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left">
+          <button className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left cursor-pointer">
             {card.cta} →
           </button>
         </div>

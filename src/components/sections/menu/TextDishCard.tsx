@@ -7,7 +7,7 @@ export const TextDishCard: React.FC<{ dish: NewDish }> = ({ dish }) => {
   const isNonVeg = dish.diet === 'non-veg';
 
   return (
-    <div className="bg-bg-card border border-muted/20 rounded-xl p-5 hover:border-gold/30 transition-all flex flex-col justify-between h-full">
+    <div className="bg-bg-card border border-muted/20 rounded-xl p-5 hover:border-gold/30 transition-all flex flex-col justify-between h-full cursor-pointer">
       <div className="flex justify-between items-start mb-2">
         <h3 className="font-serif text-lg font-bold text-cream flex items-center gap-2">
           {dish.name}
