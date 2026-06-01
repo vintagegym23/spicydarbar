@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://www.instagram.com/spicedarbar_leicester/"
+                href="https://www.instagram.com/thespicedarbar?igsh=MWtzandjN2drOWFlOA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-gold-muted/30 flex items-center justify-center text-gold hover:bg-gold hover:text-btn-dark transition-all"
