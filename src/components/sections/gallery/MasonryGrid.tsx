@@ -17,7 +17,7 @@ export const MasonryGrid: React.FC<{ items: GalleryItem[] }> = ({ items }) => {
               transition={{ duration: 0.4 }}
               className="mb-4 break-inside-avoid"
             >
-              <div className="relative group overflow-hidden rounded-lg border border-gold-muted/10">
+              <div className="relative group overflow-hidden rounded-lg border border-gold-muted/10 cursor-pointer">
                 <img
                   src={item.src}
                   alt={item.alt}

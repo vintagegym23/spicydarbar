@@ -100,13 +100,13 @@ export const OffersPopup: React.FC = () => {
           <div className="flex flex-col gap-3 pt-2">
             <a
               href="/menu"
-              className="w-full bg-gold text-btn-dark font-semibold py-2 rounded-lg hover:bg-gold/90 transition-all text-center text-sm"
+              className="w-full bg-gold text-btn-dark font-semibold py-2 rounded-lg hover:bg-gold/90 transition-all text-center text-sm cursor-pointer"
             >
               View Menu
             </a>
             <button
               onClick={() => setIsMinimized(true)}
-              className="w-full border-2 border-gold text-gold font-semibold py-2 rounded-lg hover:bg-gold/10 transition-all text-sm"
+              className="w-full border-2 border-gold text-gold font-semibold py-2 rounded-lg hover:bg-gold/10 transition-all text-sm cursor-pointer"
             >
               Minimize
             </button>

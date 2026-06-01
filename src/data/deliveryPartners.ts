@@ -9,7 +9,7 @@ export const deliveryPartners: DeliveryPartner[] = [
     description: 'Order your favourite Spicy Darbar dishes through Uber Eats and enjoy fast, reliable delivery tracked live to your door.',
     bgColor: '#06C167',
     icon: 'https://cdn.worldvectorlogo.com/logos/uber-eats-1.svg',
-    url: '#'
+    url: 'https://www.ubereats.com'
   },
   {
     id: '2',
@@ -18,7 +18,7 @@ export const deliveryPartners: DeliveryPartner[] = [
     description: 'Craving something bold? Deliveroo brings the royal flavours of Spicy Darbar straight to your table in record time.',
     bgColor: '#00CCBC',
     icon: delivervoo,
-    url: '#'
+    url: 'https://www.deliveroo.co.uk'
   },
   {
     id: '3',
@@ -27,6 +27,6 @@ export const deliveryPartners: DeliveryPartner[] = [
     description: 'Browse our full menu on Just Eat and get the rich, aromatic taste of Spicy Darbar delivered with ease.',
     bgColor: '#FF8000',
     icon: 'https://cdn.worldvectorlogo.com/logos/just-eat.svg',
-    url: '#'
+    url: 'https://www.just-eat.co.uk'
   }
 ];

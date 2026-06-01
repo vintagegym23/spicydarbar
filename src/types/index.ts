@@ -29,7 +29,7 @@ export interface GalleryItem {
   id: string;
   src: string;
   alt: string;
-  category: 'all' | 'cuisine' | 'ambience' | 'exterior';
+  category: 'all' | 'cuisine' | 'interior' | 'exterior';
   tall?: boolean;
 }
 
@@ -60,4 +60,4 @@ export interface InfoCard {
 
 export type NavPage = 'home' | 'menu' | 'gallery' | 'about' | 'contact';
 export type DietaryFilter = 'All' | 'Veg' | 'Non-Veg';
-export type GalleryCategory = 'all' | 'cuisine' | 'ambience' | 'exterior';
+export type GalleryCategory = 'all' | 'cuisine' | 'interior' | 'exterior';

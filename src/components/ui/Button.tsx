@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   disabled = false
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center transition-all duration-300';
+  const baseStyles = 'inline-flex items-center justify-center transition-all duration-300 cursor-pointer';
 
   const variants = {
     primary: 'bg-gold text-btn-dark font-sans font-semibold text-sm px-7 py-3 rounded-md hover:bg-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gold',

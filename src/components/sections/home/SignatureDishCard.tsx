@@ -9,7 +9,7 @@ interface SignatureDishCardProps {
 
 export const SignatureDishCard: React.FC<SignatureDishCardProps> = ({ dish, tagline }) => {
   return (
-    <div className="bg-bg-card border border-muted/20 rounded-xl overflow-hidden group hover:border-gold/30 transition-all flex flex-col h-full">
+    <div className="bg-bg-card border border-muted/20 rounded-xl overflow-hidden group hover:border-gold/30 transition-all flex flex-col h-full cursor-pointer">
       <div className="relative w-full aspect-[4/3] overflow-hidden">
         <img
           src={dish.image}

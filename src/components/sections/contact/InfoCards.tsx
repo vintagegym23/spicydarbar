@@ -39,7 +39,7 @@ export const InfoCards: React.FC = () => {
               <p key={i} className="text-sand text-sm">{detail}</p>
             ))}
           </div>
-          <button className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left">
+          <button className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left cursor-pointer">
             {card.cta} →
           </button>
         </div>

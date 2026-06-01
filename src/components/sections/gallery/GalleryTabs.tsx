@@ -10,8 +10,8 @@ export const GalleryTabs: React.FC<GalleryTabsProps> = ({ activeTab, onTabChange
   const categories: { id: GalleryCategory; label: string }[] = [
     { id: 'all', label: 'ALL MOMENTS' },
     { id: 'cuisine', label: 'CUISINE' },
-    { id: 'ambience', label: 'AMBIENCE' },
-    { id: 'exterior', label: 'EXTERIOR' }
+    { id: 'interior', label: 'INTERIOR' },
+    { id: 'exterior', label: 'EXTERIORS' }
   ];
 
   return (
@@ -22,7 +22,7 @@ export const GalleryTabs: React.FC<GalleryTabsProps> = ({ activeTab, onTabChange
             <button
               key={cat.id}
               onClick={() => onTabChange(cat.id)}
-              className={`font-sans text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${
+              className={`font-sans text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap cursor-pointer ${
                 activeTab === cat.id ? 'text-gold border-b border-gold' : 'text-muted hover:text-gold'
               }`}
             >

@@ -8,7 +8,7 @@ export const EidMenuBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="w-full bg-bg-base py-4 sm:py-6 md:py-8 lg:py-10 px-2 sm:px-4"
+      className="w-full bg-bg-base pt-24 py-4 sm:py-6 md:py-8 lg:py-10 px-2 sm:px-4"
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="w-full overflow-hidden rounded-lg shadow-lg">
