@@ -31,7 +31,7 @@ export const MapCard: React.FC = () => {
         </div>
         <div className="flex-shrink-0">
           <a
-            href="https://maps.google.com"
+            href="https://www.google.com/maps/search/?api=1&query=Spice+Darbar,+6+Evington+Road,+Leicester,+LE2+1HF"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-gold text-btn-dark font-sans font-bold text-sm px-8 py-4 rounded-md hover:bg-yellow-400 transition-all duration-300 w-full md:w-auto cursor-pointer"

@@ -7,22 +7,28 @@ export const InfoCards: React.FC = () => {
       id: '1',
       icon: <MapPin className="w-5 h-5 text-gold" />,
       title: 'Location',
-      details: ['6, Evington Road', 'Leicester , LE2 1HF'],
-      cta: 'GET DIRECTIONS'
+      details: ['6, Evington Road', 'Leicester, LE2 1HF'],
+      cta: 'GET DIRECTIONS',
+      href: 'https://www.google.com/maps/dir/?api=1&destination=Spice+Darbar,+6+Evington+Road,+Leicester,+LE2+1HF',
+      target: '_blank' as const
     },
     {
       id: '2',
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: 'Reservations',
       details: ['Phone: +44 7502 023334', 'Available 11 AM - 11 PM'],
-      cta: 'CALL NOW'
+      cta: 'CALL NOW',
+      href: 'tel:+447502023334',
+      target: '_self' as const
     },
     {
       id: '3',
       icon: <Mail className="w-5 h-5 text-gold" />,
       title: 'Enquiries',
       details: ['spicedarbar6@gmail.com', 'Response within 24 hours'],
-      cta: 'EMAIL US'
+      cta: 'EMAIL US',
+      href: 'mailto:spicedarbar6@gmail.com',
+      target: '_self' as const
     }
   ];
 
@@ -39,9 +45,14 @@ export const InfoCards: React.FC = () => {
               <p key={i} className="text-sand text-sm">{detail}</p>
             ))}
           </div>
-          <button className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left cursor-pointer">
+          <a
+            href={card.href}
+            target={card.target}
+            rel={card.target === '_blank' ? 'noopener noreferrer' : undefined}
+            className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left cursor-pointer"
+          >
             {card.cta} →
-          </button>
+          </a>
         </div>
       ))}
     </div>

@@ -103,7 +103,7 @@ export const menuData: MenuData = {
 
   'Chicken And Egg Curries': [
     { name: 'Butter Chicken', description: 'Chicken in creamy tomato sauce.', options: [{ price: 8 }], diet: 'non-veg' },
-    { name: 'Kaddi Chicken', description: 'Spiced chicken curry.', options: [{ price: 8 }], diet: 'non-veg' },
+    { name: 'Kadai Chicken', description: 'Spiced chicken curry.', options: [{ price: 8 }], diet: 'non-veg' },
     { name: 'Chicken Korma', description: 'Mild creamy chicken curry.', options: [{ price: 8 }], diet: 'non-veg' },
     { name: 'Palak Chicken', description: 'Chicken in spinach gravy.', options: [{ price: 8 }], diet: 'non-veg' },
     { name: 'Chicken Fry', description: 'Spiced fried chicken.', options: [{ price: 8 }], diet: 'non-veg' },
