@@ -9,7 +9,7 @@ export const InfoCards: React.FC = () => {
       title: 'Location',
       details: ['6, Evington Road', 'Leicester, LE2 1HF'],
       cta: 'GET DIRECTIONS',
-      href: 'https://www.google.com/maps/dir/?api=1&destination=Spice+Darbar,+6+Evington+Road,+Leicester,+LE2+1HF',
+      href: 'https://maps.app.goo.gl/jDg4x8X4KMUap1qC6',
       target: '_blank' as const
     },
     {
@@ -35,7 +35,13 @@ export const InfoCards: React.FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
       {cards.map((card) => (
-        <div key={card.id} className="bg-bg-card border border-gold-muted/20 rounded-lg p-8 flex flex-col group hover:border-gold/40 transition-all">
+        <a
+          key={card.id}
+          href={card.href}
+          target={card.target}
+          rel={card.target === '_blank' ? 'noopener noreferrer' : undefined}
+          className="bg-bg-card border border-gold-muted/20 rounded-lg p-8 flex flex-col group hover:border-gold/40 transition-all cursor-pointer no-underline"
+        >
           <div className="w-10 h-10 bg-[#2A1200] rounded-md flex items-center justify-center mb-6 border border-gold/10">
             {card.icon}
           </div>
@@ -45,15 +51,10 @@ export const InfoCards: React.FC = () => {
               <p key={i} className="text-sand text-sm">{detail}</p>
             ))}
           </div>
-          <a
-            href={card.href}
-            target={card.target}
-            rel={card.target === '_blank' ? 'noopener noreferrer' : undefined}
-            className="text-gold font-sans text-xs font-bold tracking-widest uppercase hover:text-yellow-400 transition-colors text-left cursor-pointer"
-          >
+          <span className="text-gold font-sans text-xs font-bold tracking-widest uppercase group-hover:text-yellow-400 transition-colors text-left">
             {card.cta} →
-          </a>
-        </div>
+          </span>
+        </a>
       ))}
     </div>
   );
