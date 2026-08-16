@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../ui/Button';
+import ChilliChickenImage from '../../../Images/chilli chicken.jpeg';
 
 export const AlternatingRows: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const AlternatingRows: React.FC = () => {
       id: '2',
       title: 'A Modern Sanctuary',
       description: 'Designed by award-winning architects, our space blends traditional Mughal motifs with minimalist modern luxury, creating an atmosphere of serene opulence.',
-      image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?w=1000',
+      image: ChilliChickenImage,
       reverse: true
     }
   ];

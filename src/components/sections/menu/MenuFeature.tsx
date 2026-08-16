@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { UtensilsCrossed } from 'lucide-react';
 import { Button } from '../../ui/Button';
 import { Eyebrow } from '../../ui/Eyebrow';
+import ChilliChickenImage from '../../../Images/chilli chicken.jpeg';
 
 export const MenuFeature: React.FC = () => {
   const navigate = useNavigate();
@@ -13,10 +14,9 @@ export const MenuFeature: React.FC = () => {
         {/* Left: Featured Experience */}
         <div className="relative h-[500px] rounded-xl overflow-hidden group">
           <img
-            src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=1200"
+            src={ChilliChickenImage}
             alt="Chef's Table"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           <div className="absolute bottom-10 left-10 right-10">

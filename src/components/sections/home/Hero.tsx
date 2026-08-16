@@ -6,6 +6,7 @@ import { Button } from '../../ui/Button';
 import { TypewriterText } from '../../ui/TypewriterText';
 import { BookingModal } from './BookingModal';
 import { Toast } from '../../ui/Toast';
+import ChilliChickenImage from '../../../Images/chilli chicken.jpeg';
 
 export const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -21,10 +22,9 @@ export const Hero: React.FC = () => {
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=1920"
-          alt="Royal Dining"
+          src={ChilliChickenImage}
+          alt="Chilli Chicken"
           className="w-full h-full object-cover opacity-40"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-bg-base via-bg-base/80 to-transparent" />
       </div>
